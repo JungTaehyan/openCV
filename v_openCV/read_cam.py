@@ -6,7 +6,7 @@ if cap.isOpened():
         ret, img = cap.read()
         if ret:
             cv2.imshow('cam', img)
-            if cv2.waitKey(1) != -1:
+            if cv2.waitKey(1) != -1: # 아무 키를 누르면
                 break
         
         else:
@@ -16,4 +16,4 @@ else:
     print("no")
 
 cap.release()
-cv2.destroyAllWindows
+cv2.destroyAllWindows()
