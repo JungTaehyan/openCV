@@ -16,5 +16,5 @@ if cap.isOpened():
             break
 else:
     print('no camera')
-cap.release()
+cap.release() # 아주 중요 킹중요
 cv2.destroyAllWindows()
