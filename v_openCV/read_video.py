@@ -3,7 +3,7 @@ import cv2
 video_file = "../v_openCV/videos/dog.mp4" # 영상 파일 경로
 
 cap = cv2.VideoCapture(video_file) # 영상 캡쳐 객체 비디오의 레퍼런스 정보가 저장됨
-# 래퍼런스 라인 찾아보기
+# cap에는 참조 첫번째 프레임이 들어간다기 보다 참조 라인이 들어간다고 생각해야 함.
 if cap.isOpened(): # 영상 객체 초기화, 주로 True/Fals로 반환됨.
     while True:
         ret, img = cap.read() # 다음 프레임을 읽는 무한루프
@@ -21,3 +21,5 @@ else:
     print("can't open video.") # 캡쳐 객체 초기화 실패
 cap.release() #캡쳐 자원 반납
 cv2.destroyAllWindows()
+
+# 비디오가 상하 반전이 되어 재생되는 문제 발견
