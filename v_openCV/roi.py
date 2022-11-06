@@ -11,8 +11,10 @@ img2 = roi.copy() # roi 배열 복제
 img[y:y+h, x+w:x+w+w] = roi # img에서 해당 영역을 roi로 채움!!
 
 print(roi.shape)
-cv2.rectangle(roi, (0,0), (h-1, w-1), (0,0,255))
+cv2.rectangle(img, (x,y), (x+w+w, y+h), (0,0,255))
+
 cv2.imshow("img", img)
+cv2.imshow("roi", img2)
 
 key = cv2.waitKey(0)
 print(key)
