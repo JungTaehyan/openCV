@@ -43,5 +43,7 @@ def onMouse(event,x,y,flags,param):     # 마우스 이벤트 핸들 함수  ---
 img = cv2.imread("../v_openCV/imgs/dog.jpg")
 cv2.imshow('img', img)
 cv2.setMouseCallback('img', onMouse) # 마우스 이벤트 등록 ---⑧
+# 콜백함수 : 특정한 이벤트가 발생하면 다른 함수를 실행하는 함수
+# 마우스콜백 : 윈도우에 마우스 이벤트가 발생했을 때 특정한 함수에 이벤트를 전달해 실행함(onMouse)
 cv2.waitKey()
 cv2.destroyAllWindows()
