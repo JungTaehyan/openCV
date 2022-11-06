@@ -34,7 +34,7 @@ def onMouse(event,x,y,flags,param):     # 마우스 이벤트 핸들 함수  ---
                 roi = img[y0:y0+h, x0:x0+w] # 원본 이미지에서 선택 영영만 ROI로 지정 ---⑥
                 cv2.imshow('cropped', roi)  # ROI 지정 영역을 새창으로 표시
                 cv2.moveWindow('cropped', 0, 0) # 새창을 화면 좌측 상단에 이동
-                cv2.imwrite('./cropped.jpg', roi)   # ROI 영역만 파일로 저장 ---⑦
+                cv2.imwrite('./imgs/cropped.jpg', roi)   # ROI 영역만 파일로 저장 ---⑦
                 print("croped.")
             else:
                 cv2.imshow('img', img)  # 드래그 방향이 잘못된 경우 사각형 그림ㅇㅣ 없는 원본 이미지 출력
