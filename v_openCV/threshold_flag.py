@@ -1,4 +1,4 @@
-#%%
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -20,4 +20,4 @@ for i, (key, value) in enumerate(imgs.items()):
     plt.xticks([]);    plt.yticks([])
     
 plt.show()
-# %%
+
