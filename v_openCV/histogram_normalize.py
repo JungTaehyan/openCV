@@ -2,6 +2,16 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+'''
+dst = cv2.normalize(src, dst, alpha, beta, type_flag)
+src: 정규화 이전의 데이터
+dst: 정규화 이후의 데이터
+alpha: 정규화 구간 1
+beta: 정규화 구간 2, 구간 정규화가 아닌 경우 사용 안 함
+type_flag: 정규화 알고리즘 선택 플래그 상수
+'''
+
 img = cv2.imread("../v_openCV/imgs/dog.jpg", cv2.IMREAD_GRAYSCALE)
 
 img_f = img.astype(np.float32)
