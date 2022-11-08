@@ -11,7 +11,7 @@ img = cv2.imread("../v_openCV/imgs/dog.jpg", cv2.IMREAD_GRAYSCALE)
 rows, cols = img.shape[:2]
 
 hist = cv2.calcHist([img], [0], None, [256], [0, 256])
-cdf = hist.cumsum()
+cdf = hist.cumsum() # 누적 히스토그램| 누적 : 빈도수?
 cdf_m = np.ma.masked_equal(cdf, 0)
 cdf_m = (cdf_m - cdf_m.min())/(rows * cols) * 255
 cdf = np.ma.filled(cdf_m, 0).astype('uint8')
